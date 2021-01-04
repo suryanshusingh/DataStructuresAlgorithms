@@ -393,6 +393,173 @@ namespace DataStructuresAlgorithms
             return true;
         }
 
+        // 16 . Remove duplicates from a sorted linked list
+        // https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
+        // Time Complexity: O(n)
+        public void RemoveDuplicates()
+        {
+            Node temp = head;
+            while(temp.next!=null)
+            {
+                if (temp.data == temp.next.data)
+                {
+                    temp.next = temp.next.next;
+                }
+                else
+                {
+                    temp = temp.next;
+                }
+            }
+        }
+
+        //Approach 2
+        public void RemoveDuplicatesRecursive()
+        {
+            RemoveDuplicates(head);
+        }
+        private void RemoveDuplicates(Node node)
+        {
+            if (node == null) return;
+
+            if (node.next != null)
+            {
+                if (node.data == node.next.data)
+                {
+                    node.next = node.next.next;
+                    RemoveDuplicates(node);
+                }
+                else
+                {
+                    RemoveDuplicates(node.next);
+                }
+            }           
+        }
+
+        // 17. Remove duplicates from an unsorted linked list
+        // https://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/
+        // Method 1 - Using two loops
+        // Time complexity - O(n*n)
+        public void RemoveUnsortedDuplicates()
+        {
+            Node outer = head;
+            Node inner;
+            while(outer.next != null)
+            {
+                inner = outer;
+                while(inner.next != null)
+                {
+                    if (outer.data == inner.next.data)
+                    {
+                        inner.next = inner.next.next;
+                    }
+                    else inner = inner.next;
+                }
+                outer = outer.next;
+            }
+        }
+
+        // 17. Remove duplicates from an unsorted linked list
+        // https://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/
+        // Method 3 - Using hashing
+        // Time Complexity - O(n) , Space Complexity - O(n)
+        public void RemoveUnsortedDuplicatesHashing()
+        {
+            HashSet<int> container = new HashSet<int>();
+            Node current = head;
+            Node prev = null;
+            while(current != null)
+            {
+                if (container.Contains(current.data))
+                {
+                    prev.next = current.next;
+                }
+                else
+                {
+                    container.Add(current.data);
+                    prev = current;
+                }
+                current = current.next;                
+            }
+        }
+
+        // https://www.geeksforgeeks.org/swap-nodes-in-a-linked-list-without-swapping-data/
+        // 18. Swap nodes in a linked list without swapping data
+        // 
+        public void SwapNodes(int first, int second)
+        {
+            if (first == second) return;
+            Node current = head;
+            Node previous = null;
+            Node firstNode = null;
+            Node secondNode = null;
+            while (current != null)
+            {
+                if (current.data == first)
+                {
+                    firstNode = previous == null ? head :  previous.next;
+                }
+                if (current.data == second)
+                {
+                    secondNode = previous == null ? head : previous.next;
+                }
+                previous = current;
+                current = current.next;
+            }
+            if (firstNode != null && secondNode != null)
+            {
+                firstNode.data = second;
+                secondNode.data = first;
+            }
+        }
+
+        // 19. Pairwise swap elements of a given linked list
+        // https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
+        // Time Complexity - O(n)
+        public void PairSwap()
+        {
+            Node temp = head;
+            while(temp != null && temp.next != null)
+            {
+                int first = temp.data;
+                temp.data = temp.next.data;
+                temp.next.data = first;
+                temp = temp.next.next;
+            }
+        }
+
+        public void PairSwapRecursion()
+        {
+            PairSwap(head);
+        }
+        private void PairSwap(Node node)
+        {
+            if (node == null || node.next == null) return;
+
+            int first = node.data;
+            node.data = node.next.data;
+            node.next.data = first;
+
+            PairSwap(node.next.next);
+        }
+
+
+        // https://www.geeksforgeeks.org/move-last-element-to-front-of-a-given-linked-list/
+        // 20. Move last element to front of a given Linked List
+        public void MoveToFront()
+        {
+            if (head == null && head.next == null) return;
+            Node temp = head;
+            Node prev = null;
+            while(temp.next != null)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+            int data = temp.data;
+            prev.next = null;
+            Push(data);
+        }
+
 
     }
 
