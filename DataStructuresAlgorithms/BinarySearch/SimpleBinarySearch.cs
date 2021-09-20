@@ -6,6 +6,7 @@ namespace DataStructuresAlgorithms.BinarySearch
 {
     class SimpleBinarySearch
     {
+        // LeetCode : https://leetcode.com/problems/binary-search/
         //Rename this method to Main to run
         public static void NotMain(string[] args)
         {
