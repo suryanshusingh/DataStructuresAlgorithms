@@ -13,6 +13,8 @@ namespace DataStructuresAlgorithms.BinarySearch
             Console.WriteLine(SqrtOfANumberMethod(16));
         }
 
+        //Time Complexity - O(logN)
+        //Space Complexity - O(1)
         private static int SqrtOfANumberMethod(int x)
         {
             int start = 1;
