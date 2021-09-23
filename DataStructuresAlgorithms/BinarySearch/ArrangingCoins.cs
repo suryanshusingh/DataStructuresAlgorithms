@@ -8,7 +8,7 @@ namespace DataStructuresAlgorithms.BinarySearch
     {
         //Rename this method to Main to run
         // LeetCode: https://leetcode.com/problems/arranging-coins/
-        public static void Main(string[] args)
+        public static void NotMain(string[] args)
         {
             Console.WriteLine(ArrangeCoins(55));
         }
