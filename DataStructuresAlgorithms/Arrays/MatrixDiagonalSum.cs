@@ -4,13 +4,13 @@ using System.Text;
 
 namespace DataStructuresAlgorithms.Arrays
 {
-    // https://leetcode.com/problems/matrix-diagonal-sum/
-    //Rename this method to Main to run
+    
     class MatrixDiagonalSum
     {
+        // https://leetcode.com/problems/matrix-diagonal-sum/
+        //Rename this method to Main to run
         private static void NotMain(string[] args)
         {
-
         }
 
         public static int DiagonalSum(int[][] mat)
