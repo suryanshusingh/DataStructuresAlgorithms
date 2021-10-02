@@ -4,7 +4,7 @@ namespace DataStructuresAlgorithms
 {
     class Program
     {
-        static void Main(string[] args)
+        static void NotMain(string[] args)
         {
             LinkedList linkedList = new LinkedList();
             Console.WriteLine(linkedList.GetLengthRecursive());
