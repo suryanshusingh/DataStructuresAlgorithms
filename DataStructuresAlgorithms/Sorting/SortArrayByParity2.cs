@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructuresAlgorithms.Sorting
 {
-    class SortArrayByParity
+    class SortArrayByParity2
     {
         //https://leetcode.com/problems/sort-array-by-parity-ii/
         public static void NotMain(string[] args)
@@ -12,7 +12,7 @@ namespace DataStructuresAlgorithms.Sorting
 
         }
 
-        public int[] SortArrayByParity2(int[] nums)
+        public int[] SortArrayByParity22(int[] nums)
         {
             int i = 0; int j = 1;
             while (i < nums.Length && j < nums.Length)
