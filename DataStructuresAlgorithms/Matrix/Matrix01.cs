@@ -7,7 +7,8 @@ namespace DataStructuresAlgorithms.Matrix
 
     class Matrix01
     {
-        public static void Main(string[] args)
+        // https://leetcode.com/problems/01-matrix/
+        public static void NotMain(string[] args)
         {
             int[][] matrix = new int[][] { new int[] { 0, 0, 0 },new int[] { 0, 1, 0 }, new int[]{ 1, 1, 1 } };
             Matrix.DisplayMatrix(matrix);
