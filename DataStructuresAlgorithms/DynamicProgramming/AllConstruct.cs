@@ -6,7 +6,7 @@ namespace DataStructuresAlgorithms.DynamicProgramming
 {
     class AllConstruct
     {
-        public static void Main(string[] args)
+        public static void NotMain(string[] args)
         {
             Print(AllConstructRecursion("purple", new List<string> { "purp", "p", "ur", "le", "purpl" })); //2
             Print(AllConstructRecursion("abcdef", new List<string> { "ab", "abc", "cd", "def", "abcd","ef", "c" })); //4
