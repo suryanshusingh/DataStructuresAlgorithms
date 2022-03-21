@@ -6,7 +6,7 @@ namespace DataStructuresAlgorithms.Arrays
 {
     class FindNearestPoint
     {
-        public static void Main(string[] args)
+        public static void NotMain(string[] args)
         {
             int[][] points = new int[][] { new int[] { 1, 2 }, new int[] { 3, 1 }, new int[] { 2, 4 }, new int[] { 2, 3 }, new int[] { 4, 4 } };
             NearestValidPoint(3, 4, points);

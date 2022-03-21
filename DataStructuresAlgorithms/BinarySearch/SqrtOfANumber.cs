@@ -8,7 +8,7 @@ namespace DataStructuresAlgorithms.BinarySearch
     {
         // Leet Code - https://leetcode.com/problems/sqrtx/
         //Rename this method to Main to run
-        public static void NotMain(String[] args)
+        public static void NotMain(string[] args)
         {
             Console.WriteLine(SqrtOfANumberMethod(16));
         }
