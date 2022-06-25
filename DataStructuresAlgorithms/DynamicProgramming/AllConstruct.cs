@@ -14,10 +14,6 @@ namespace DataStructuresAlgorithms.DynamicProgramming
             Print(AllConstructRecursion("enterapotentpot", new List<string> { "a", "p", "ent", "enter", "ot", "o", "t" })); //4
             Print(AllConstructRecursion("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", new List<string> { "e", "ee", "eee", "eeee" }));//0
         }
-        public static void Main(string args)
-        {
-
-        }
 
         // TC:
         // SC:

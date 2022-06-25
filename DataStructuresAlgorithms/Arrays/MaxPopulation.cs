@@ -24,7 +24,6 @@ namespace DataStructuresAlgorithms.Arrays
                 a[logs[i][1] - 1950]--;
             }
 
-            int sum = 0;
             for (int i = 1; i < a.Length; i++)
             {
                 a[i] += a[i - 1];

@@ -17,7 +17,7 @@ namespace DataStructuresAlgorithms.BinarySearch
         //Space Complexity - O(1)
         public static bool IsIsPerfectSquare(int num)
         {
-            int start = 1; int track = 3;
+            int start = 1;
             while (num > 0)
             {
                 num = num - start;

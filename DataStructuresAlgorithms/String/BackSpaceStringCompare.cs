@@ -6,7 +6,7 @@ namespace DataStructuresAlgorithms.String
 {
     internal class BackSpaceStringCompare
     {
-        public static void Main(string[] args)
+        public static void NotMain(string[] args)
         {
             //bool a = BackSpaceCompare("ab##", "c#d#");
         }
